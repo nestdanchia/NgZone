@@ -1,0 +1,61 @@
+
+
+<mat-card class="mat-elevation-z0"> 
+<div style="text-align:center;">
+  <mat-card-title>Nueva Venta</mat-card-title>
+</div>
+<mat-card-content> 
+<form>
+<div class="container" fxLayout="column" fxLayout.gt-xs="row " fxLayoutGap="20px "  >
+    <ng-template matStepLabel>Condicion de Venta</ng-template>
+    <mat-form-field appearance="fill" fxFlex="25">
+      <mat-label>Condicion.:</mat-label>
+      <mat-select placeholder="Condicion de Venta"  cdkFocusInitial>
+        <mat-option value=undefined>Seleccione</mat-option>
+        <mat-option value=1>Contado</mat-option>
+        <mat-option value=2>Cuenta Corriente</mat-option>
+      </mat-select>
+
+    </mat-form-field>
+    <mat-form-field appearance="fill" fxFlex="75" >
+      <mat-label>Cliente</mat-label>
+      <input type="text"
+           placeholder="Pick one"
+           aria-label="Number"
+           matInput
+           [formControl]="myControl"
+           [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of options" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+      
+     
+     
+     
+  </mat-form-field>
+</div>
+
+ 
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z1" >
+    <caption style="font-size: 20px;height: 4vh;border: 10px; color: rgb(54, 11, 211);"> DETALLE </caption>
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+    <ng-container matColumnDef="precio">
+      <th mat-header-cell *matHeaderCellDef> Precio. </th>
+      <td mat-cell *matCellDef="let element"> {{element.precio}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+
+
+  </form>
+</mat-card-content> 
+ 
+</mat-card>

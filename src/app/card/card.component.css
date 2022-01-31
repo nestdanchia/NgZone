@@ -1,0 +1,6 @@
+.conteiner {height: 100px;}
+    .left   {background-color: cyan;}
+    .right  {background-color: yellow;}
+    table {
+        width: 20%;
+      }
