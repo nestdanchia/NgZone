@@ -8,7 +8,7 @@
 <form>
 <div class="container" fxLayout="column " fxLayout.gt-xs="row" fxLayoutGap="20px "  >
     <ng-template matStepLabel>Condicion de Venta</ng-template>
-    <mat-form-field appearance="fill" fxFlex="25">
+    <mat-form-field appearance="fill" fxFlex="25%">
       <mat-label>Condicion.:</mat-label>
       <mat-select placeholder="Condicion de Venta"  cdkFocusInitial>
         <mat-option value=undefined>Seleccione</mat-option>
@@ -17,7 +17,7 @@
       </mat-select>
 
     </mat-form-field>
-    <mat-form-field appearance="fill" fxFlex="75" >
+    <mat-form-field appearance="fill" fxFlex="75%" >
       <mat-label>Cliente</mat-label>
       <input type="text"
            placeholder="Pick one"
@@ -53,7 +53,14 @@
 
 
 
-     
+<div class="outerContainer">
+  <div fxLayout="row" fxLayoutGap="20px" class="container">
+    <div fxLayoutAlign="center center" fxFlex="75">1</div>
+    <div fxLayoutAlign="center center" fxFlex="25">2</div>
+    <div fxLayoutAlign="center center">3</div>
+    <div fxLayoutAlign="center center">4</div>
+  </div>
+</div>
      
      
 
