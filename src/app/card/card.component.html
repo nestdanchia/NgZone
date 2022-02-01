@@ -2,13 +2,14 @@
 
 <mat-card class="mat-elevation-z0"> 
 <div style="text-align:center;">
-  <mat-card-title>Nueva Venta Tabla fuera de Container </mat-card-title>
+  <mat-card-title>Con Nueva Venta Tabla fuera de Container usando row warp y calc</mat-card-title>
 </div>
 <mat-card-content> 
 <form>
-<div class="container" fxLayout="column " fxLayout.gt-xs="row" fxLayoutGap="20px "  >
+<div class="container" fxLayout="column  " fxLayout.gt-xs="row warp " fxLayoutGap="20px"  >
     <ng-template matStepLabel>Condicion de Venta</ng-template>
-    <mat-form-field appearance="fill" fxFlex="25%">
+
+    <mat-form-field appearance="fill" fxFlex="calc(25%-20px)">
       <mat-label>Condicion.:</mat-label>
       <mat-select placeholder="Condicion de Venta"  cdkFocusInitial>
         <mat-option value=undefined>Seleccione</mat-option>
@@ -17,8 +18,9 @@
       </mat-select>
 
     </mat-form-field>
-    <mat-form-field appearance="fill" fxFlex="75%" >
-      <mat-label>Cliente</mat-label>
+ 
+
+    <mat-form-field appearance="fill" fxFlex="calc(75%-20px)" >
       <input type="text"
            placeholder="Pick one"
            aria-label="Number"
@@ -31,7 +33,15 @@
       </mat-option>
     </mat-autocomplete>
   </mat-form-field>
+  <div fxFlex="calc(100%-20px)">Utilizando row warp y calc se agregan dos Card </div>
+  <mat-card class="child-1" fxFlex="calc(25%-20px)">1. One</mat-card> 
+  <mat-card class="child-2" fxFlex="calc(75%-20px)">1. Two</mat-card> 
 </div>
+
+<br>
+
+
+
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z1" >
   <caption style="font-size: 20px;height: 4vh;border: 10px; color: rgb(54, 11, 211);"> DETALLE </caption>
   <ng-container matColumnDef="name">
@@ -46,6 +56,8 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+
+
 </form>
 </mat-card-content> 
 
@@ -53,14 +65,7 @@
 
 
 
-<div class="outerContainer">
-  <div fxLayout="row" fxLayoutGap="20px" class="container">
-    <div fxLayoutAlign="center center" fxFlex="75">1</div>
-    <div fxLayoutAlign="center center" fxFlex="25">2</div>
-    <div fxLayoutAlign="center center">3</div>
-    <div fxLayoutAlign="center center">4</div>
-  </div>
-</div>
+  
      
      
 
