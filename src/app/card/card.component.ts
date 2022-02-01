@@ -25,10 +25,7 @@ export class CardComponent implements OnInit {
   myTable = new FormControl();
   options: string[] = ['Berta', 'Omar', 'Ulises'];
   constructor() { }
-  // https://www.quackit.com/css/flexbox/tutorial/nested_flex_containers.cfm
-// https://zoaibkhan.com/blog/create-a-responsive-card-grid-in-angular-using-flex-layout-part-1/
-// https://edupala.com/how-to-implement-angular-flex-layout/
-// https://github.com/angular/flex-layout/wiki/fxFlex-API
+
   ngOnInit(): void {
   }
 
