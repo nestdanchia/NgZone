@@ -1,4 +1,5 @@
-.conteiner {height: 100px;}
+.conteiner {height: 100hv;
+            width:100%  }
     .left   {background-color: cyan;}
     .right  {background-color: yellow;}
     table {
