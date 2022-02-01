@@ -2,7 +2,7 @@
 
 <mat-card class="mat-elevation-z0"> 
 <div style="text-align:center;">
-  <mat-card-title>Con Nueva Venta Tabla fuera de Container usando row warp y calc</mat-card-title>
+  <mat-card-title>Con Nueva Venta Tabla Dentro del Container usando row warp y calc</mat-card-title>
 </div>
 <mat-card-content> 
 <form>
@@ -36,12 +36,9 @@
   <div fxFlex="calc(100%-20px)">Utilizando row warp y calc se agregan dos Card </div>
   <mat-card class="child-1" fxFlex="calc(25%-20px)">1. One</mat-card> 
   <mat-card class="child-2" fxFlex="calc(75%-20px)">1. Two</mat-card> 
-</div>
-
-<br>
 
 
-
+<div fxFlex="calc(50%-20px)">
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z1" >
   <caption style="font-size: 20px;height: 4vh;border: 10px; color: rgb(54, 11, 211);"> DETALLE </caption>
   <ng-container matColumnDef="name">
@@ -56,6 +53,10 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+</div>
+
+
+</div>
 
 
 </form>
