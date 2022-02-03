@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { AgGridModule } from 'ag-grid-angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,6 +11,10 @@ import { MatTableModule } from '@angular/material/table';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
+//  https://blog.ag-grid.com/get-started-with-angular-grid-in-5-minutes/
+// npm install --save ag-grid-community ag-grid-angular
+// 
+// 
 // https://www.adictosaltrabajo.com/2018/02/14/maquetacion-con-flexbox/
 // Cómo usar Flexbox en Angular Material
 // <<div class="container" fxLayout="column" fxLayoutAlign="start"
@@ -35,6 +39,7 @@ import {MatDialogModule} from '@angular/material/dialog';
      MatDialogModule,
      ReactiveFormsModule,
     BrowserAnimationsModule,
+    
   
   ],
   providers: [],
