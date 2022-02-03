@@ -45,9 +45,7 @@ export interface Geo{
   templateUrl: './grid.component.html',
   styleUrls: ['./grid.component.css']
 })
-// https://www.ag-grid.com/angular-data-grid/grouping-complex-objects/#creating-group-keys-from-complex-objects
-// https://www.htmlelements.com/docs/angular-http-crud/
-//https://blog.ag-grid.com/dynamically-setting-ag-grid-columns-from-json/
+
 export class GridComponent implements OnInit,AfterViewInit {
 public gridApig:any;
  public gridColumnApig:any;
